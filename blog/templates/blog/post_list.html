@@ -2,6 +2,14 @@
 	<h1>The Brent Phillips Blog</h1>
 </div>
 
+<div>
+		{% for sum in summary %}
+		<p>{{ sum.text }}</p>
+		<p>{{ sum.published_date }}</p>
+		{% endfor %}
+	
+</div>
+
 {% for post in posts %}
 	<div>
 		<h1><a href="">{{ post.title }}</a></h1>
