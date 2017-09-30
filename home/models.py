@@ -12,7 +12,7 @@ class Summary(models.Model):
 		self.save()
 
 	def __str__(self):
-		return self.title
+		return self.text
 
 
 class Experience(models.Model):
@@ -28,7 +28,7 @@ class Experience(models.Model):
 		self.save()
 
 	def __str__(self):
-		return self.title
+		return self.exp_title
 
 class School(models.Model):
 	author = models.ForeignKey('auth.User')
@@ -42,7 +42,7 @@ class School(models.Model):
 		self.save()
 
 	def __str__(self):
-		return self.title
+		return self.school_title
 
 
 class Skill(models.Model):
@@ -56,7 +56,7 @@ class Skill(models.Model):
 		self.save()
 
 	def __str__(self):
-		return self.title
+		return self.skill
 
 
 class Certification(models.Model):
@@ -71,4 +71,4 @@ class Certification(models.Model):
 		self.save()
 
 	def __str__(self):
-		return self.title
+		return self.cert_title
