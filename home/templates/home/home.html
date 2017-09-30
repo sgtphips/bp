@@ -1,7 +1,49 @@
-<div>
-		{% for sum in summary %}
-		<p>{{ sum.text }}</p>
-		<p>{{ sum.published_date }}</p>
-		{% endfor %}
-	
-</div>
+{% extends 'base.html' %}
+
+
+{% block content %}
+	<div class="well">
+			<h1>Summary</h1>
+			{% for sum in summary %}
+			<p>{{ sum.text }}</p>
+			{% endfor %}
+		
+	</div>
+	<hr>
+	<div class="well">
+			<h1>Experience</h1>
+			{% for exp in experience %}
+			<p>{{ exp.exp_title }}</p>
+			{% endfor %}
+		
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="well">
+					<h1>Education</h1>
+					{% for sch in school %}
+					<p>{{ sch.school_title }}</p>
+					{% endfor %}
+				
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="well">
+					<h1>Skills</h1>
+					{% for sk in skill %}
+					<p>{{ sk.skill }}</p>
+					{% endfor %}
+				
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="well">
+				<h1>Certifications</h1>
+				{% for cert in certification %}
+				<p>{{ cert.cert_title }}</p>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

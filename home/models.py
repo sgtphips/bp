@@ -14,7 +14,7 @@ class Summary(models.Model):
 	def __str__(self):
 		return self.text
 
-
+# Need to add employment dates to this model
 class Experience(models.Model):
 	author = models.ForeignKey('auth.User')
 	exp_title = models.CharField(max_length=200)
@@ -29,7 +29,7 @@ class Experience(models.Model):
 
 	def __str__(self):
 		return self.exp_title
-
+# Need to add attendance dates and major to this model
 class School(models.Model):
 	author = models.ForeignKey('auth.User')
 	school_title = models.CharField(max_length=200)
@@ -58,7 +58,7 @@ class Skill(models.Model):
 	def __str__(self):
 		return self.skill
 
-
+# Need to add date when aquired certification
 class Certification(models.Model):
 	author = models.ForeignKey('auth.User')
 	cert_title = models.CharField(max_length=200)

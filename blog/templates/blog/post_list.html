@@ -1,14 +1,7 @@
-<div>
-	<h1>The Brent Phillips Blog</h1>
-</div>
+{% extends 'base.html' %}
 
-<div>
-		{% for sum in summary %}
-		<p>{{ sum.text }}</p>
-		<p>{{ sum.published_date }}</p>
-		{% endfor %}
-	
-</div>
+{% block content %}
+
 
 {% for post in posts %}
 	<div>
@@ -16,3 +9,5 @@
 		<p>{{ post.text|linebreaksbr }}</p>
 	</div>
 {% endfor %}
+
+{% endblock %}
