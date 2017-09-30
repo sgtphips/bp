@@ -25,7 +25,7 @@ SECRET_KEY = 'k$@%53)0y)nz+g$h0w@(gt6j)mwo3y^%l4pp@e#li2xy+g)-vn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','poposhub.pythonanywhere.com']
 
 
 # Application definition
