@@ -2,16 +2,23 @@
 
 
 {% block content %}
-	<div class="well">
-			<h1>Summary</h1>
-			{% for sum in summary %}
-			<p>{{ sum.text }}</p>
-			{% endfor %}
-		
+	<div class="row">
+		<div class="col-md-4">
+			<img src="http://fillmurray.com/300/300" alt="" class="img-responsive">
+		</div>
+		<div class="col-md-8">
+			<div class="well">
+					<h2>Summary</h2>
+					{% for sum in summary %}
+					<p>{{ sum.text }}</p>
+					{% endfor %}
+			</div>
+		</div>
 	</div>
+	
 	<hr>
 	<div class="well">
-			<h1>Experience</h1>
+			<h2>Experience</h2>
 			{% for exp in experience %}
 			<p>{{ exp.exp_title }}</p>
 			{% endfor %}
@@ -21,7 +28,7 @@
 	<div class="row">
 		<div class="col-md-4">
 			<div class="well">
-					<h1>Education</h1>
+					<h2>Education</h2>
 					{% for sch in school %}
 					<p>{{ sch.school_title }}</p>
 					{% endfor %}
@@ -30,7 +37,7 @@
 		</div>
 		<div class="col-md-4">
 			<div class="well">
-					<h1>Skills</h1>
+					<h2>Skills</h2>
 					{% for sk in skill %}
 					<p>{{ sk.skill }}</p>
 					{% endfor %}
@@ -39,7 +46,7 @@
 		</div>
 		<div class="col-md-4">
 			<div class="well">
-				<h1>Certifications</h1>
+				<h2>Certifications</h2>
 				{% for cert in certification %}
 				<p>{{ cert.cert_title }}</p>
 				{% endfor %}
