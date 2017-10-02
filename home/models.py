@@ -29,6 +29,7 @@ class Experience(models.Model):
 
 	def __str__(self):
 		return self.exp_title
+		
 # Need to add attendance dates and major to this model
 class School(models.Model):
 	author = models.ForeignKey('auth.User')

@@ -9,8 +9,8 @@
 		<div class="col-md-8">
 			<div class="well">
 					<h2>Summary</h2>
-					{% for sum in summary %}
-					<p>{{ sum.text }}</p>
+					{% for summary in summaries %}
+						{{ summary.text }}
 					{% endfor %}
 			</div>
 		</div>
@@ -19,36 +19,37 @@
 	<hr>
 	<div class="well">
 			<h2>Experience</h2>
-			{% for exp in experience %}
-			<p>{{ exp.exp_title }}</p>
+			{% for experience in experiences %}
+				<p>Company: {{ experience.exp_title }}</p>
+				<p>Company Info: {{ experience.exp_sub_title }}</p>
+				<p>Skills Used: {{ experience.exp_skills }}</p>
 			{% endfor %}
-		
 	</div>
 	<hr>
 	<div class="row">
 		<div class="col-md-4">
 			<div class="well">
 					<h2>Education</h2>
-					{% for sch in school %}
-					<p>{{ sch.school_title }}</p>
+					{% for school in schools %}
+						<p>University: {{ school.school_title }}</p>
+						<p>School Info: {{ school.school_info }}</p>
 					{% endfor %}
-				
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="well">
 					<h2>Skills</h2>
-					{% for sk in skill %}
-					<p>{{ sk.skill }}</p>
+					{% for skill in skills %}
+						<p>{{ skill.skill }}</p>
 					{% endfor %}
-				
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="well">
 				<h2>Certifications</h2>
-				{% for cert in certification %}
-				<p>{{ cert.cert_title }}</p>
+				{% for certification in certifications %}
+					<p>Cert: {{ certification.cert_title }}</p>
+					<p>Expires: {{ certification.cert_exp_date }}</p>
 				{% endfor %}
 			</div>
 		</div>
